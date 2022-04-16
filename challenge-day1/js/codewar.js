@@ -39,3 +39,17 @@ const negativeAnyways = (number) =>{
 }
 
 document.getElementById('negative').innerHTML = `The Negative Number: ${negativeAnyways(9)}`;
+
+// challenge #4: Map an array elements and return double each item
+
+const maps = (array) => {
+    return array.map(element => element * 2);
+}
+
+// maps([3,6,9,0, 56,7]
+
+document.getElementById('double').innerHTML = `The Double Array: ${maps([3,6,9,0, 56,7])}`;
+
+// Challenge #5:
+//The first century spans from the year 1 up to and including the year 100, the second century - 
+//from the year 101 up to and including the year 200, etc.
