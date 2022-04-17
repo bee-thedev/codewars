@@ -66,4 +66,42 @@ function century(year) {
   }
   return century;
 }
-console.log(century(459));
+
+// const century = (year) => {
+//     return Math.ceil(year / 100);
+// }
+
+document.getElementById('century').innerHTML = `The Century: ${century(701)}`;
+
+// Challenge #6:
+//Let's play! You have to return which player won! In case of a draw return Draw!.
+
+
+const rps = (p1,p2) => {
+    if(p1 === p2){
+        return "Draw!";
+    }else if(p1 === "rock" && p2 === "scissors"){
+        return "Player 1 won!";
+    }else if(p1 === "paper" && p2 === "rock"){
+        return "Player 1 won!";
+    }else if(p1 === "scissors" && p2 === "paper"){
+        return "Player 1 won!";
+    }else{
+        return "Player 2 won!";
+    }
+}
+console.log(rps("rock", "rock"));
+
+// function rps(p1, p2) {
+//     var choices = ['rock', 'paper', 'scissors'];
+//     var x = choices.indexOf(p1);
+//     var y = choices.indexOf(p2);
+//     console.log(x, y);
+//     if (x === y) return 'Draw!';
+//     if (x === 0 && y === 2) return 'Player 1 won!';
+//     if (x === 2 && y === 0) return 'Player 2 won!';
+//     if (x > y) return 'Player 1 won!'
+//     else return 'Player 2 won!';
+//   }
+
+  console.log(rps("rock", "rock"));
