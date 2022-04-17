@@ -105,3 +105,17 @@ console.log(rps("rock", "rock"));
 //   }
 
   console.log(rps("rock", "rock"));
+
+  //Challenge #7: Very simple, given an integer or a floating-point number, find its opposite.
+
+  const opposite = (number) => {
+      if(number > 0){
+          return -number;
+      }else if(number < 0){
+          return -number;
+      }
+  }
+
+  console.log(opposite(-50));
+
+  //Challenge #8:
