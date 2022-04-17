@@ -53,3 +53,17 @@ document.getElementById('double').innerHTML = `The Double Array: ${maps([3,6,9,0
 // Challenge #5:
 //The first century spans from the year 1 up to and including the year 100, the second century - 
 //from the year 101 up to and including the year 200, etc.
+
+function century(year) {
+  let century = 0;
+
+  for(let i=0; i <=100; i++){
+    if(year % 100 === 0){
+      century = year / 100;
+    }else{
+      century = Math.floor(year / 100) + 1;
+    }
+  }
+  return century;
+}
+console.log(century(459));
