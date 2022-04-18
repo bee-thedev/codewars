@@ -162,4 +162,17 @@ function repeatAString(times, string) {
 
 console.log(repeatAString(5, "Beenysh"));
 
-//Challenge #11:
+//Challenge #11: Write a function to split a string and convert it into an array of words.
+
+function wordsIntoArray (string){
+    let array = [];
+    let words = string.split(" ");
+    console.log(words);
+    words.map(word => array.push(word));
+
+    return array;
+}
+
+console.log(wordsIntoArray("Hello World"));
+
+//Split( ) splits a string and return it in an array ..but in above we have saved that in a different array
