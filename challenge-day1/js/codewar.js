@@ -118,4 +118,11 @@ console.log(rps("rock", "rock"));
 
   console.log(opposite(-50));
 
-  //Challenge #8:
+  //Challenge #8:Given a set of numbers, return the additive inverse of each. 
+  //Each positive becomes negatives, and the negatives become positives.
+
+  function invert(array) {
+    return array.map(item => item >= 0 ? item* -1 : item* -1);
+ }
+ 
+ console.log(invert([-1, 4, -5, 27, -27, 89, 76, 2,4, -6]));
