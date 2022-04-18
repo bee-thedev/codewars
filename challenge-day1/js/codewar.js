@@ -122,7 +122,44 @@ console.log(rps("rock", "rock"));
   //Each positive becomes negatives, and the negatives become positives.
 
   function invert(array) {
+    document.getElementById('inverse').innerHTML = `Original Array : ${array}`;
     return array.map(item => item >= 0 ? item* -1 : item* -1);
  }
  
- console.log(invert([-1, 4, -5, 27, -27, 89, 76, 2,4, -6]));
+
+ document.getElementById('inverse1').innerHTML = invert([-1, 4, -5, 27, -27, 89, 76, 2,4, -6]);
+
+    //Challenge #9: Finding Sum of array items/numbers
+
+    // Sum Numbers
+function sum (numbersArray) {
+    let sum = 0;
+    console.log(numbersArray);
+  numbersArray.map(item=> sum += item);
+  return sum;
+  }
+  
+document.getElementById('findsum').innerHTML = (sum([1,2,3,74,-55]));
+
+
+//challenge #10: Repeat a string 
+
+
+// function repeatAString(string, times) {
+//     let repeatedString = "";
+//     for(let i = 0; i < times; i++){
+//         repeatedString += string;
+//     }
+//     return repeatedString;
+// }
+
+//console.log(repeatAString("hello",3));
+
+function repeatAString(times, string) {
+    return string.repeat(times);
+}
+
+
+console.log(repeatAString(5, "Beenysh"));
+
+//Challenge #11:
