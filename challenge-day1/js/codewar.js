@@ -176,3 +176,35 @@ function wordsIntoArray (string){
 console.log(wordsIntoArray("Hello World"));
 
 //Split( ) splits a string and return it in an array ..but in above we have saved that in a different array
+
+
+//Challenege # 12 : create a function that randomly display rock paper scissors
+
+const randomRPS = () => {
+    let randomChoice = Math.random();
+    if(randomChoice < 0.33){
+        return 'rock'
+    }else if(randomChoice < 0.66){
+        return 'paper'
+    }else{
+        return 'scissors'
+    }
+}
+
+// randomRPS();
+
+
+// Challenge #13: Considering the above as bot, compare your probability of win against the bot
+
+const whoWins = (playerChoice) => {
+    let botchoice = randomRPS();
+    if( (playerChoice === 'rock' && botchoice === 'scissors') || (playerChoice === 'paper' && botchoice === 'rock') || ( playerChoice === 'scissors' && botchoice === 'paper')){
+        console.log("You have won")
+    }else if(playerChoice === botchoice){
+        console.log("It's a drawwwwwwwwwwww")
+    }else{
+        console.log("The Bot has beaten you")
+    }
+}
+
+whoWins('rock');
