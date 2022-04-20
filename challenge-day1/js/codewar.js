@@ -250,8 +250,55 @@ function digitize(n) {
     console.log(convert)
 }
 
-digitize(12345);
+digitize(547893);
 
 
 // Challenge #16. Day 4: Given a random non-negative number, 
 //you have to return the digits of this number within an array in reverse order.
+
+
+function splitIntoArray(n) {
+    let splitting = String(n).split('').map(item => Number(item)).reverse();
+    return splitting;
+}
+
+splitIntoArray(348597);
+
+//Challenge #17: Day 4: Clock shows h hours, m minutes and s seconds after midnight.
+
+//Your task is to write a function which returns the time since midnight in milliseconds.
+
+function past(h, m, s){
+    //#Happy Coding! ^_^
+    let hoursMS = h*3600000;
+    let minuteMS = m*60000;
+    let secondMS = s*1000;
+    
+    let time = hoursMS + minuteMS + secondMS + "ms";
+    console.log(time)
+    return time;
+  }
+
+  past(2, 10, 45)
+
+// Challenge#18 - Day4:There was a test in your class and you passed it. Congratulations!
+//But you're an ambitious person. You want to know if you're better than the average student in your class.
+
+//You receive an array with your peers' test scores. Now calculate the average and compare your score!
+
+//Return True if you're better, else False!
+
+
+  function betterThanAverage(classPoints, yourPoints) {
+    let average = classPoints.reduce((a,b) => a+b)/classPoints.length;
+    console.log(average);
+    if(yourPoints > average){
+        return true;
+    }else{
+        return false;
+    }
+  }
+
+  betterThanAverage([23, 24, 17, 25, 15],14)
+
+  //Challenge #19 -Day4:
