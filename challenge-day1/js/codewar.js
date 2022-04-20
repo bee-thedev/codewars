@@ -200,11 +200,58 @@ const whoWins = (playerChoice) => {
     let botchoice = randomRPS();
     if( (playerChoice === 'rock' && botchoice === 'scissors') || (playerChoice === 'paper' && botchoice === 'rock') || ( playerChoice === 'scissors' && botchoice === 'paper')){
         console.log("You have won")
+        document.getElementById('rps').innerHTML = `You have won!`;
     }else if(playerChoice === botchoice){
         console.log("It's a drawwwwwwwwwwww")
+        document.getElementById('rps').innerHTML = `It's a draw!`;
     }else{
         console.log("The Bot has beaten you")
+        document.getElementById('rps').innerHTML = `The Bot has beaten you!`;
     }
 }
 
-whoWins('rock');
+// whoWins('rock');
+
+// Challenge #14 : Create a function that takes an array,
+// Play the game 'x' times Where x is number of choices in array
+//Print the result of each game to console
+
+
+const playGame = (gamesarray) => {
+    gamesarray.forEach(choice => whoWins(choice))
+}
+
+playGame(['rock', 'paper', 'scissors']);
+
+
+//Challenge #14 - Day3: You are given the length and width of a 4-sided polygon. 
+//The polygon can either be a rectangle or a square.
+//If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+const areaOrPerimeter = function(l , w) {
+    if( l === w){
+        return l*w
+    }else{
+        return 2*( l + w)
+    }
+  };
+
+console.log(areaOrPerimeter(4,5));
+
+
+// Challenge #15 - Day 3: Convert numbers into an array.
+//Also reverse the array as well
+
+function digitize(n) {
+    let splitting = Array.from(String(n));
+    console.log(splitting)
+
+    let convert = splitting.map(item => Number(item)).reverse();
+    console.log(convert)
+}
+
+digitize(12345);
+
+
+// Challenge #16. Day 4: Given a random non-negative number, 
+//you have to return the digits of this number within an array in reverse order.
