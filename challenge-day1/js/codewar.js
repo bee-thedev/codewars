@@ -312,3 +312,14 @@ function past(h, m, s){
 }
 
     console.log(simpleMultiplication(17))
+
+
+    //Challenge#1 - Day5: Create an array of numbers then sum all the numbers
+
+    const accumulatedValue = (array) =>{
+        let reduced = array.reduce((acc,c) => acc + c);
+        console.log(reduced);
+    }
+
+    accumulatedValue([1,2,3,4,5,6,7,8,9,10])
+
