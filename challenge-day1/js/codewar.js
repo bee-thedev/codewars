@@ -346,3 +346,16 @@ function past(h, m, s){
       }
 
     console.log(points(["3:1"]))
+
+    // function points(games) {
+    //     let pointstable = 0;
+    //     for (let i = 0; i < games.length; i++ ){
+    //       [x,y] = games[i].split(":");
+    //       if (x>y){
+    //        pointstable += 3
+    //       }else if ( x === y){
+    //         pointstable += 1;
+    //       }
+    //     }
+    //     return pointstable;
+    //   }
