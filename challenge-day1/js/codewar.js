@@ -377,3 +377,13 @@ function past(h, m, s){
       }
 
       console.log(hoopCount(13))
+
+// Day8 -- Challenge#1: 
+//Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+function removeExclamationMarks(s) {
+   console.log(s.replace(/!/gi , ""));
+   return s.replace(/!/gi , "");
+}
+
+removeExclamationMarks("Hey! You gotta act wisely!")
