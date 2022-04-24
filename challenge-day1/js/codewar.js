@@ -387,3 +387,22 @@ function removeExclamationMarks(s) {
 }
 
 removeExclamationMarks("Hey! You gotta act wisely!")
+
+// Day8 - Challenge #2: Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+//Note: input will never be an empty string
+
+// function fakeBin(x){
+//   return x.replace(/[0-4]/g, "0").replace(/[5-9]/g, "1");
+// }
+
+// console.log(fakeBin("45385593107843568"))
+
+
+function fakeBin(x){
+  let fake = x.split("").map(number => number < 5 ? "0" : "1");
+  return fake.join("")
+}
+
+
+console.log(fakeBin("45385593107843568"))
