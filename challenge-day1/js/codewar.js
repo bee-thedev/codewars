@@ -406,3 +406,46 @@ function fakeBin(x){
 
 
 console.log(fakeBin("45385593107843568"))
+
+
+// Day9 -- Challenge#1 : Bob is working as a bus driver. However, he has become extremely popular amongst the city's residents. With so many passengers wanting to get aboard his bus, he sometimes has to face the problem of not enough space left on the bus! He wants you to write a simple program telling him if he will be able to fit all the passengers.
+// You have to write a function that accepts three parameters:
+//cap is the amount of people the bus can hold excluding the driver.
+//on is the number of people on the bus excluding the driver.
+//wait is the number of people waiting to get on to the bus excluding the driver.
+// If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+
+// function enough(cap, on, wait) {
+//   let capacity = ""
+//   if( cap >=on && wait === on){
+//     capacity =  on - wait;
+//     console.log(`He can fit all ${wait} passengers`)
+//   }else if(cap >=on && on > wait){
+//     capacity = (cap -on - wait)*-1;
+//     console.log(`He can't fit ${capacity} of the ${wait} waiting`)
+//   }
+//   return capacity;
+// }
+
+// console.log(enough(100, 70,40))
+
+
+function enough(cap, on, wait){
+    if( cap >= on + wait){
+      return 0
+    }else{
+      return (on+wait) -cap;
+    }
+}
+
+console.log(enough(100, 70,40))
+
+
+function removeChar(str){
+  //You got this!
+  let thestring = str.split("").slice(1, -1).join("");
+  return thestring
+ };
+
+ 
+ console.log(removeChar("eloquent"))
