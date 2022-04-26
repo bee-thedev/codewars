@@ -476,3 +476,109 @@ function bmi(weight, height) {
 }
 
 console.log(bmi(60, 1.54))
+
+// Day 9 - Challenge #4:
+//Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+
+//I love you
+//a little
+//a lot
+//passionately
+//madly
+//not at all
+//When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+
+//Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
+
+
+function howMuchILoveYou(nbPetals) {
+  let petals = nbPetals % 6
+
+  if(petals === 0){
+    return "not at all"
+  }else if(petals === 1){
+    return "I love you"
+  }else if (petals === 2){
+    return "a little"
+  }else if (petals === 3){
+    return "a lot"
+  }else if (petals === 4){
+    return "passionately"
+  }else if (petals === 5){
+    return "madly"
+  }else if(petals === 6){
+    return "not at all"
+  }
+}
+
+console.log(howMuchILoveYou(6))
+
+
+function petalsLove(pickPetals){
+  let petals = ["not at all", "I love you", "a little", "a lot", "passionately", "madly"]
+
+  return petals[pickPetals % 6]
+}
+
+console.log(petalsLove(13))
+
+//Day10 -- Challenge #1: Create a function which answers the question "Are you playing banjo?".
+//If your name starts with the letter "R" or lower case "r", you are playing banjo!
+//name + " plays banjo" 
+//name + " does not play banjo"
+
+function areYouPlayingBanjo(name) {
+  if(name.charAt(0).toLowerCase() === 'r' || name.charAt(0).toLowerCase() === 'R'){
+    return `${name} plays banjo`
+  }else{
+    return `${name} does not play banjo`
+  }
+}
+
+console.log(areYouPlayingBanjo("rikki"))
+
+
+//Day10 -- Challenge #2: Create a function which translates a given DNA string into RNA.
+
+ // "GCAT" => "GCAU"
+
+ function DNAtoRNA(dna) {
+  return dna.replace(/T/g, "U")
+}
+
+console.log(DNAtoRNA("GCAT"))
+
+
+//Day10 -- Challenge #3: Simple, remove the spaces from the string, then return the resultant string.
+
+function noSpace(x){
+  //  return x.split(" ").join('')
+  return x.replace(/\s/g, "")
+}
+
+console.log(noSpace("My name is Beenysh Saeed abd I work for myself"))
+
+
+//Day10 -Challenge #4: Create a function finalGrade, which calculates the final grade of a student depending on two parameters: 
+//a grade for the exam and a number of completed projects.
+// This function should take two arguments: exam - grade for exam (from 0 to 100); projects - number of completed projects (from 0 and above);
+
+//100, if a grade for the exam is more than 90 or if a number of completed projects more than 10.
+//90, if a grade for the exam is more than 75 and if a number of completed projects is minimum 5.
+//75, if a grade for the exam is more than 50 and if a number of completed projects is minimum 2.
+//0, in other cases
+
+function finalGrade (exam, projects) {
+  let grade = "";
+  if(exam > 90 || projects > 10){
+    return grade = 100
+  }else if(exam > 75 && projects >= 5){
+    return grade = 90
+  }else if (exam > 50 && projects >=2 ){
+    return grade = 75
+  }else{
+    return grade = 0;
+  }
+}
+
+console.log(finalGrade(5,12))
