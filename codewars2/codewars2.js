@@ -23,3 +23,26 @@ function solution(str){
 }
 
 console.log(solution("Beenysh"))
+
+// Day11- Challenge#3: Code as fast as you can! You need to double the integer and return it.
+
+function doubleInteger(i) {
+    let doubletheint = 2*i;
+    return doubletheint;
+  }
+
+  console.log(doubleInteger(8))
+
+
+  //Day11-Challenge#4: Implement a function which convert the given boolean value into its string representation.
+
+//Note: Only valid inputs will be given.
+
+function booleanToString(b){
+    let intoString = b.toString()
+    
+    console.log(typeof intoString)
+    return intoString
+  }
+
+  console.log(booleanToString(true))
