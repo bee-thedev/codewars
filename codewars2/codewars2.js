@@ -131,4 +131,24 @@ var countSheep = function (num){
 
 console.log(countSheep(6))
 
+//Day12-Challenge#3: REturn grades basing on avg of three scores attain by a student
 
+function getGrade (s1, s2, s3) {
+  let grade = " "
+  let score = (s1 + s2 + s3)/3;
+  
+  if(score>= 90 && score <=100){
+    grade = 'A'
+  }else if(score<90 && score>=80){
+    grade = "B"
+  }else if(score<80 && score >=70){
+    grade = "C"
+  }else if( score<70 && score >=60){
+    grade = "D"
+  }else{
+    grade = "F"
+  }
+  return grade;
+}
+
+console.log(getGrade(67,89,100))
