@@ -170,3 +170,28 @@ function isTriangle(a,b,c)
 }
 
 console.log(isTriangle(3,6,9))
+
+
+//Day13-Challenge#2:
+//You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+
+//Complete the method which accepts such an array, and returns that single different number.
+
+//The input array will always be valid! (odd-length >= 3)
+
+//Examples
+//[1, 1, 2] ==> 2
+//[17, 17, 3, 17, 17, 17, 17] ==> 3
+
+
+function stray(numbers) {
+  let sorting = numbers.sort((function(a, b){return a - b}));
+  console.log(sorting)
+  if(numbers[0] < numbers[1]){
+    return sorting.shift()
+  }else{
+  return sorting.pop()
+}
+}
+
+console.log(stray([50,-1,50,50,50,50]))
