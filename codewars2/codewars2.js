@@ -197,7 +197,7 @@ function stray(numbers) {
 console.log(stray([50,-1,50,50,50,50]))
 
 
-//Day13-Challenge: 
+//Day13-Challenge#3: 
 
 //Given a list of integers, determine whether the sum of its elements is odd or even.
 
