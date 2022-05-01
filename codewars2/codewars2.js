@@ -274,12 +274,15 @@ getCount("MEESHAAL")
 
 
 function vowelIndices(word){
-  let find = word.split(" ").filter(vowels => {
-    if(vowels === 'a' || vowels === 'i' || vowels === 'e' || vowels === 'o' || vowels === 'u' || vowels === 'y'){
-       word.indexOf(vowels)
+  let lowercase = word.toLowerCase()
+  let arr = [...lowercase]
+  let newarr = []
+  arr.forEach((vowel,index)=>{
+    if(vowel === 'a' || vowel === 'e' || vowel === 'i' || vowel === 'o' || vowel === 'u' || vowel === 'y'){
+      newarr.push(index + 1);
     }
-})
-return find
+  });
+  return newarr
 }
 
 
