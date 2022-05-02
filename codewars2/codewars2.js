@@ -289,9 +289,28 @@ function vowelIndices(word){
 console.log(vowelIndices("beenysh"))
 
 //Day 16 - Challenge#1: 
-//For this game of BINGO, you will receive a single array of 10 numbers from 1 to 26 as an input. Duplicate numbers within the array are possible.
+//For this game of BINGO, you will receive a single array of 10 numbers from 1 to 26 as an input. 
+//Duplicate numbers within the array are possible.
 
 //Each number corresponds to their alphabetical order letter (e.g. 1 = A. 2 = B, etc). 
 //Write a function where you will win the game if your numbers can spell "BINGO". 
 //They do not need to be in the right order in the input array). 
 //Otherwise you will lose. Your outputs should be "WIN" or "LOSE" respectively.
+
+function bingo() {
+ let letter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+"S","T", "U", "V", "W", "X", "Y", "Z"];
+let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+
+let arrayy = numbers.forEach((number, i) => {
+ number[i] === letter[i] 
+ return letter[i] 
+}
+
+console.log(bingo())
+
+function bingo(a) { 
+  let al = '0ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+  let map = a.map(el => al[el])
+  return map.includes('B') && map.includes('I') && map.includes('N') && map.includes('G') && map.includes('O') ? 'WIN' : 'LOSE' 
+  }
