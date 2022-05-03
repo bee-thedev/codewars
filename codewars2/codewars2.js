@@ -297,20 +297,24 @@ console.log(vowelIndices("beenysh"))
 //They do not need to be in the right order in the input array). 
 //Otherwise you will lose. Your outputs should be "WIN" or "LOSE" respectively.
 
-function bingo() {
- let letter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
-"S","T", "U", "V", "W", "X", "Y", "Z"];
-let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+// function bingo() {
+//  let letter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+// "S","T", "U", "V", "W", "X", "Y", "Z"];
+// let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
 
-let arrayy = numbers.forEach((number, i) => {
- number[i] === letter[i] 
- return letter[i] 
-}
+// let arrayy = numbers.forEach((number, i) => {
+//  number[i] === letter[i] 
+//  return letter[i] 
+// }
 
-console.log(bingo())
+
 
 function bingo(a) { 
-  let al = '0ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
-  let map = a.map(el => al[el])
+  let letter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+  "S","T", "U", "V", "W", "X", "Y", "Z"];
+  let map = a.map(item => letter[item])
   return map.includes('B') && map.includes('I') && map.includes('N') && map.includes('G') && map.includes('O') ? 'WIN' : 'LOSE' 
   }
+
+
+  console.log(bingo([2,5,19,3,25]))
