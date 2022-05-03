@@ -317,4 +317,4 @@ function bingo(a) {
   }
 
 
-  console.log(bingo([2,5,19,3,25]))
+  console.log(bingo([1,8,13,6,14]))
