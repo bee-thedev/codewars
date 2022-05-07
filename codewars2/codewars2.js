@@ -310,14 +310,14 @@ console.log(vowelIndices("beenysh"))
 
 
 function bingo(a) { 
-  let letter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+  let letter = ["0","A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
   "S","T", "U", "V", "W", "X", "Y", "Z"];
   let map = a.map(item => letter[item])
   return map.includes('B') && map.includes('I') && map.includes('N') && map.includes('G') && map.includes('O') ? 'WIN' : 'LOSE' 
   }
 
 
-  console.log(bingo([1,8,13,6,14]))
+  console.log(bingo([21,13,2,7,5,14,7,15,9,10]))
 
   //Day16-Challenge#1: 
 
