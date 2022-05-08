@@ -39,7 +39,9 @@ function zeroAndOne(s) {
   console.log(zeroAndOne("010101010"))
 
 
-  
+  //Day18-Challenge#1:
+
+  //
 
 
 
