@@ -49,9 +49,17 @@ function zeroAndOne(s) {
 //1,9 -> 1,2,3,4,6,7,8,9 -> Result 8
 //4,17 -> 4,6,7,8,9,10,11,12,13,14,16,17 -> Result 12
 
+function dontGiveMeFive(start, end)
+{
+  let answer = []
+ for(let i = start; i<= end; i++){
+   answer.push(i + '')
+}
+let newanswer = answer.filter(number => number.includes('5'));
+return answer.length - newanswer.length;
+}
 
-
-
+console.log(dontGiveMeFive(1,19))
 
 
 
