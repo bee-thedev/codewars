@@ -13,22 +13,13 @@
 //splitAndMerge("Hello World!", ",")     ==  "H,e,l,l,o W,o,r,l,d,!"
 
 function splitAndMerge(string, separator) {
-    let thesplit = string.split("");
-    console.log(thesplit)
-    let thejoin = thesplit.join(" ")
-    let thejoinbyhyphen = thesplit.join("-")
-    let thejoinbydot = thesplit.join(".")
-    let thejoinbycomma = thesplit.join(",") 
-if(separator == " "){
-    return thejoin
-}else if(separator == "-"){
-    return thejoinbyhyphen
-}else if(separator == "."){
-    return thejoinbydot
-}else if(separator == ","){
-    return thejoinbycomma
-}
+        let splitstring = string.split(" ")
+        let splitted = splitstring.map((word)=> word.split("").join(separator)).join(" ")
+        console.log(splitted)
+    }
 
-}
 
- console.log( splitAndMerge("beehance", " "))
+
+ splitAndMerge("bee the dev", "-")
+
+
