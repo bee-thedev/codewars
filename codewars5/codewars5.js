@@ -66,15 +66,15 @@ topSecret("Pb qdph lv Mrkq")
 
 function infiniteLoop(arr,d,n){
     for(let i = 0; i<arr.length; i++){
-      let rotate= ''
-      for( let j=0; j<arr[i].length; j++){
-        if(d === "left"){
+      for( let j=0; j<arr[i][j].length; j++){
+        console.log(arr[i][j].length)
+         
+          console.log(arr[j].length)
 
-        }
-        return console.log(arr[i][2])
+        
       }
     }  
   
 }
 
-infiniteLoop([[1,2,3], [4,5,6], [7,8,9]], "left", 3)
+infiniteLoop([[1,2,3], [4,5,6,0], [7,8,9]], "left", 3)
