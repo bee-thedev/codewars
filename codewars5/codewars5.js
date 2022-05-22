@@ -65,16 +65,69 @@ topSecret("Pb qdph lv Mrkq")
 
 
 function infiniteLoop(arr,d,n){
-    for(let i = 0; i<arr.length; i++){
-      for( let j=0; j<arr[i][j].length; j++){
-        console.log(arr[i][j].length)
-         
-          console.log(arr[j].length)
-
-        
-      }
-    }  
+  if(d === "left"){
+    for(let i = 0; i<=n; i++){
+     arr[2].push(arr[0][i])
+     arr[1].push(arr[2][i])
+     arr[0].push(arr[1][i])
+    }
+     for(i=0; i<=n; i++){
+    arr[0].shift()
+    arr[1].shift()
+    arr[2].shift()
+    }
+  }    
+  if(d === "right"){
+    for(let i = 1; i<=n; i++){
+      arr[0].unshift(arr[2][arr[2].length-i])
+      arr[1].unshift(arr[0][arr[0].length-i])
+      arr[2].unshift(arr[1][arr[1].length-i])
+    }
+    for(let i=0; i<n; i++){
+      arr[0].pop()
+      arr[1].pop()
+      arr[2].pop()
+    }
+  }
+  return console.log(arr)
+}  
   
+
+infiniteLoop([[1,2,3], [4,5,6], [7,8,9]], "right", 1)
+
+
+//7kyu-Challenge
+
+//Task
+//Coding in function sortIt. function accept 1 parameters arr, it's a number array. Your task is to..
+// sort the array according to the specified conditions,
+// and returns a new array(should not modify the original array).
+
+//conditions1: according to the number of elements(in ascending order) for example:
+
+//sortIt([1,1,1,2,2,3]) should return [3,2,2,1,1,1]
+//because [1,1,1,2,2,3] has one 3, two 2 and three 1
+//conditions2: If the same number of elements, according to the number values(in descending order) for example:
+
+//sortIt([1,1,1,2,2,2,3,3,3]) should return [3,3,3,2,2,2,1,1,1]
+//because number of 3,2 and 1 both are three, then according to 3>2>1
+//Comprehensive two conditions should be like this:
+
+//sortIt([1,2,3,4,4,5,5,6,6]) should return [3,2,1,6,6,5,5,4,4]
+
+
+function sortIt(arr){
+  let arr1 = arr.slice().sort((a,b)=>b-a)
+  console.log(arr1)
+  let sorted = arr1.sort((a,b)=>{
+    let as = arr.slice().filter(x=>x===a)
+    let bs = arr.slice().filter(x=>x===b)
+    if(as.length===bs.length) return b-a
+    if(as.length<bs.length) return -1
+    if(as.length>bs.length) return +1
+  })
+  return console.log(sorted)
 }
 
-infiniteLoop([[1,2,3], [4,5,6,0], [7,8,9]], "left", 3)
+sortIt([1,2,3,4,4,5,5,6,6])
+
