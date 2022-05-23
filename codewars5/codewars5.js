@@ -131,3 +131,72 @@ function sortIt(arr){
 
 sortIt([1,2,3,4,4,5,5,6,6])
 
+
+//7kyu-Challenge
+
+//Task
+//Coding in function isolateIt. function accept 1 parameters arr, it's a string array. 
+//Your task is to put a character "|" into the middle of each element.
+
+//If the string length is an even number, use the insert method. for example: 
+//"abcd" should became "ab|cd". "|" should be inserted between ab and cd.
+
+//If the string length is an odd number, use the replacement method. for example: 
+//"abcde" should became "ab|de". Character c will be replaced by |.
+
+//The original array should not be changed, you need to return a new array..
+//(if you use the map method, you do not need to worry about this).
+
+//Example
+//isolateIt(["abcd","efgh"]) should return ["ab|cd","ef|gh"]
+//isolateIt(["abcde","fghij"]) should return ["ab|de","fg|ij"]
+//isolateIt(["1234","56789"]) should return ["12|34","56|89"]
+
+
+const drawSeparator = (array) =>{
+  let splitCase = array.map((item)=>{
+    let isolatIt = item.split("");
+    if(item.length%2 === 0){
+      isolatIt.splice(isolatIt.length /2, 0, "|")
+      return console.log(isolatIt.join(""))
+    }else{
+      isolatIt.splice(Math.floor(isolatIt.length/2), 1, "|")
+      return console.log(isolatIt.join(""))
+    }
+  })
+  return splitCase
+}
+
+drawSeparator(["myname", "beenysh", "saeedo"])
+
+//7kyu-Challenge -- Training JS #27: methods of arrayObject---filter()
+
+//Task
+//Coding in function countGrade. function accept 1 parameters scores, it's a number array. 
+//Your task is to count the grade distribution of the scores, to return an object like this:
+
+//{S:888, A:888, B:888, C:888, D:888, X:888}
+//Grading rules:
+
+//Grade S: Full marks(score=100)
+//Grade A: score<100 and score>=90
+//Grade B: score<90 and score>=80
+// Grade C: score<80 and score>=60
+// Grade D: score<60 and score>=0
+// Grade X: score=-1(The cheating guy gets a score like that)
+// Example
+// countGrade([50,60,70,80,90,100]) should return {S:1, A:1, B:1, C:2, D:1, X:0}
+// countGrade([65,75,,85,85,95,100,100]) should return {S:2, A:1, B:2, C:2, D:0, X:0}
+// countGrade([-1,-1,-1,-1,-1,-1]) should return {S:0, A:0, B:0, C:0, D:0, X:6}
+
+function countGrade(scores){
+  let sortScores = scores.filter(score=>{
+    let scoreObject = { };
+    if(score === 100){
+        return scoreObject.push(score)
+    }
+  })
+  return console.log(sortScores)
+}
+
+countGrade([65,75,,85,85,95,100,100])
