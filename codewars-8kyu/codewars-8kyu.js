@@ -119,3 +119,42 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
 
 
 bigToSmall([[1,2,3], [5,6], [9, 0]])
+
+// Training JS #31: methods of arrayObject---isArray() indexOf() and toString()
+
+
+// Task
+// Coding in function blackAndWhite. function accept 1 parameter arr(a number array).
+
+// If arr is not an array, function should return:
+
+// "It's a fake array"
+// If arr contains elements 5 and 13, function should return:
+
+// "It's a black array"
+// If arr contains neither 5 nor 13, function should return:
+
+// "It's a white array"
+// Examples
+// blackAndWhite(5,13) should return "It's a fake array"
+// blackAndWhite([5,13]) should return "It's a black array"
+// blackAndWhite([5,12]) should return "It's a white array" 
+
+
+function blackAndWhite(arr){
+    let trueArray = Array.isArray(arr);
+    if(!trueArray) return console.log("It's a fake array")
+
+   if(trueArray){
+          if(arr.indexOf(5) !== -1 && arr.indexOf(13) !== -1){
+              return console.log("It's a black array")
+          }else{
+              return console.log("It's a white array")
+          }
+       }
+   }
+
+
+  blackAndWhite([1,2,13])
+
+
