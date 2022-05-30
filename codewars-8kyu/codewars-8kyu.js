@@ -234,3 +234,6 @@ function maxMin(arr1,arr2){
     
 
   maxMin([1,3,5],[9,8,7])
+
+
+  

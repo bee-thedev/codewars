@@ -63,8 +63,55 @@ function cutCube(volume,n){
 // CD5678%^ IG7593~% FH8638@&
 // EF9012!@ GB7047%$ KD7604^%
 
-
 function rndCode(){
-    //coding here...
-    
+   let code ='';
+   let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   let numbs = "0123456789";
+   let charsOnly = "~!@#$%^&*";
+
+   for(let i = 0; i < 2; i++){
+     code = code + letters[Math.floor(Math.random()*letters.length)];
+     console.log(code)
+   }
+
+   for(let i= 0; i < 4 ; i++){
+     code = code + numbs[Math.floor(Math.random()*numbs.length)];
+     console.log(code)
+   }
+
+   for (let i = 0; i < 2; i++){
+     code = code + charsOnly[Math.floor(Math.random()*charsOnly.length)]
+     console.log(code)
+   }
+   return code;
   }
+
+rndCode()
+
+//Training JS #37: Unlock new weapon---RegExp Object
+
+// Task
+// Coding in function countAnimals. function accept two parameters: animals, ..
+//a string contains some animals; count, an array list of which animals we should count. 
+//The result should be a number array.
+
+// Examples
+// countAnimals("dog,cat",["dog","cat"]); //=> [1,1]
+// countAnimals("dog,cat",["dog","cat","pig"]); //=> [1,1,0]
+// countAnimals("dog,dog,cat",["dog","cat"]); //=> [2,1]
+// countAnimals("dog,dog,cat",["pig","cow"]); //=> [0,0]
+
+function countAnimals(animals,count){
+  let array = []
+  for(let i =0; i< count.length; i++){
+   let match = animals.match(new RegExp(count[i],"g")||[])
+   if (match === null) {
+    array.push(0);
+  } else {
+    array.push(match.length);
+  }
+  }
+  return console.log(array);
+}
+
+countAnimals("dog,cat",["dog","cat"])
