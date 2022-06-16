@@ -88,18 +88,37 @@ findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]);
 //. 7036, 6421, 6510, 5821, 8602, 5312, 7836, 8032, 9871, 5990, 6309, 7825]
 // Your function should return the 20 year estimate of the stairs climbed using the formula above.
 
-function stairsIn20(s){
+// function stairsIn20(s){
     
-    let allDays = 0;
+//     let allDays = 0;
 
-    for(let i = 0; i< s.length; i++){
-        for(let j=0; j < s[i].length; j++){
-            allDays += s[i][j]
-        }
-    }
+//     for(let i = 0; i< s.length; i++){
+//         for(let j=0; j < s[i].length; j++){
+//             allDays += s[i][j]
+//         }
+//     }
 
-    return allDays * 20;
+//     return allDays * 20;
     
+//   }
+
+//   stairsIn20()
+
+
+  //8kyu -- Simple validation of a username with regex
+
+
+//   Write a simple regex to validate a username. Allowed characters are:
+
+// lowercase letters,
+// numbers,
+// underscore
+// Length should be between 4 and 16 characters (both included).
+
+
+function validateUsr(username) {
+    res = /^[a-z0-9_]{4,16}$/g;
+    return console.log(res.test(username))
   }
 
-  stairsIn20()
+  validateUsr("beenysh007")
