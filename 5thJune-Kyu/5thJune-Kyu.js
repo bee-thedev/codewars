@@ -142,3 +142,26 @@ function smash (words) {
 smash(["Good", "things", "come", "to", "those", "who", "fight"])
 
 
+//8kyu-Enumerable Magic #20 - Cascading Subsets
+// Create a method each_cons that accepts a list and a number n, and returns cascading subsets of 
+//the list of size n, like so:
+
+// each_cons([1,2,3,4], 2)
+//   #=> [[1,2], [2,3], [3,4]]
+
+// each_cons([1,2,3,4], 3)
+//   #=> [[1,2,3],[2,3,4]]
+  
+
+function eachCons(array, n) {
+  let newarray =[]
+ console.log(array.length)
+ for(let i=0; i<array.length; i++){
+  newarray.push(array.slice(i, i + n))
+ }
+return console.log(newarray.filter(number=> number.length ===n))
+}
+
+
+eachCons([1,2,3,4], 3)
+
