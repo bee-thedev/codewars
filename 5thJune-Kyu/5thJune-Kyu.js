@@ -165,3 +165,19 @@ return console.log(newarray.filter(number=> number.length ===n))
 
 eachCons([1,2,3,4], 3)
 
+//7kyu-
+
+function GetSum( a, b )
+{
+  if( a < b ){ return loop( a, b ); }
+  if( a > b ){ return loop( b, a ); }
+  return a;
+}
+
+function loop( i, j ){
+  var total = 0;
+  for( i ; i <= j ; i++ ){
+    total += i;
+  }
+  return total;
+}
