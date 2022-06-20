@@ -165,6 +165,7 @@ return newarray.filter(number=> number.length ===n)
 
 eachCons([1,2,3,4], 3)
 
+<<<<<<< HEAD
 
 //7kyu --You're a square!
 
@@ -195,3 +196,24 @@ var isSquare = function(n){
 }
 
 isSquare()
+=======
+//7kyu-
+
+function GetSum( a, b )
+{
+  if( a < b ){ return loop( a, b ); }
+  if( a > b ){ return loop( b, a ); }
+  return a;
+}
+
+function loop( i, j ){
+  var total = 0;
+  for( i ; i <= j ; i++ ){
+    total += i;
+  }
+  return total;
+}
+
+
+GetSum(4,8)
+>>>>>>> fb3209611df8fb7f993b3748b0f6adf03f08c39f
