@@ -214,7 +214,11 @@ GetSum(4,8)
 // 26  =>  false
 
 var isSquare = function(n){
-  return false; // fix me
+  let sqrt = Math.sqrt(n)
+  if(sqrt % 1 ===0){
+    return console.log(true)
+  }else{
+  return console.log(false); // fix me
 }
-
-isSquare()
+}
+isSquare(-2)
