@@ -17,7 +17,9 @@ function addBinary(a,b) {
     let intoBinary = sum.toString(2)
     console.log(typeof intoBinary)
     console.log(intoBinary)
-    return console.log(`${a} + ${b} = ${sum} in decimal or ${intoBinary} in binary`)
+    // return console.log(`${a} + ${b} = ${sum} in decimal or ${intoBinary} in binary`)
+
+    return intoBinary;
     
 }
 
