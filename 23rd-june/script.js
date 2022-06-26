@@ -58,7 +58,27 @@ function nbYear(p0, percent, aug, p) {
     for( years=0; p0 <p; years++){
         p0 = Math.floor(p0 + p0 * percent/100 + aug);
     }
-    return console.log(years);
+    return years;
 }
 
 nbYear(1500000, 2.5, 10000, 2000000)
+
+
+
+//7kyu-String ends with?
+
+// Complete the solution so that it returns true if the first argument(string)...
+// passed in ends with the 2nd argument (also a string).
+
+// Examples:
+
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
+
+
+function solution(str, ending){
+    // TODO: complete
+  }
+
+
+  solution('abc', 'de')
