@@ -77,8 +77,9 @@ nbYear(1500000, 2.5, 10000, 2000000)
 
 
 function solution(str, ending){
-    // TODO: complete
+    let ab = str.match(/ending/g)
+    console.log(ab)
   }
 
 
-  solution('abc', 'de')
+  solution('abc', 'c')
