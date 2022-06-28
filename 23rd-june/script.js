@@ -83,3 +83,64 @@ function solution(str, ending){
 
 
   solution('abc', 'c')
+
+
+//7kyu -Wealth Equality Finally!
+
+//   The year is 2088 and the Radical Marxist Socialist People's Party (RMSPP) has just seized power in Brazil.
+
+// Their first act in power is absolute wealth equality through coercive redistribution.
+
+// Create a function that redistributes all wealth equally among all citizens.
+
+// Wealth is represented as an array/list where every index is the wealth of a single citizen. The function should mutate the input such that every index has the same amount of wealth. MUTATE the input array/list, don't return anything.
+
+// See example:
+
+// wealth = [5, 10, 6]  # This represents:
+//                      # citizen 1 has wealth 5
+//                      # citizen 2 has wealth 10
+//                      # citizen 3 has wealth 6
+                     
+// redistribute_wealth(wealth) # mutates wealth list
+// wealth => [7, 7, 7] # wealth has now been equally redistributed
+// Info:
+
+// MUTATE the input array/list, don't return anything
+
+// Input is garantueed to hold at least 1 or more citizens
+
+// Wealth of citizen will an integer with minimum 0 (negative wealth not possible)
+
+// Handling of floating point error will not be tested
+
+
+function redistributeWealth(wealth) {
+    // Mutate wealth
+  }
+
+
+  redistributeWealth()
+
+
+
+//7kyu- Disemvowel Trolls
+
+//   Trolls are attacking your comment section!
+
+// A common way to deal with this situation is to remove all of the vowels from the trolls' ..
+//comments, neutralizing the threat.
+
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+// Note: for this kata y isn't considered a vowel.
+
+function disemvowel(str) {
+    let popoutVowelsRegex = /[aeiou]/ig;
+    let popoutVowels = str.replace( popoutVowelsRegex, '' );
+    return console.log(popoutVowels);
+  }
+
+  disemvowel("This website is for losers LOL!");
