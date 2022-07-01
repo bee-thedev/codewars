@@ -189,3 +189,20 @@ function pillars(numPill, dist, width) {
 }
 
 pillars(2, 10, 10);
+
+//7kyu-Replace every nth
+
+// DESCRIPTION:
+// Task
+// Write a method, that replaces every nth char oldValue with char newValue.
+
+// Method:
+
+// replaceNth(text, n, oldValue, newValue)
+
+function replaceNth(text, n, oldValue, newValue) {
+  let textSplit = text.split(": ")
+  console.log(textSplit)
+}
+
+replaceNth("Vader said: I am your father.");
