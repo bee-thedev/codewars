@@ -244,3 +244,5 @@ function filter_list(l) {
 }
 
 filter_list([1,'a','b',0,15])
+
+

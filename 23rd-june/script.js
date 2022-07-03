@@ -206,3 +206,102 @@ function replaceNth(text, n, oldValue, newValue) {
 }
 
 replaceNth("Vader said: I am your father.");
+
+function replaceNth(text, n, oldValue, newValue) {
+
+  if (n <= 0)
+    return text;
+  
+  let count = 0;
+  
+  const regex = new RegExp(oldValue, 'g');
+  const iter = _ => ++count % n === 0 ? newValue : oldValue
+  
+  return text.replace(regex, iter);
+  
+}
+
+//7kyu - Simple Fun #195: Guess Hat Color
+
+// Task
+// Four men, a, b, c and d are standing in a line, one behind another.
+
+// There's a wall between the first three people (a, b and c) and the last one (d).
+
+// The men a, b and c are lined up in order of height, so that:
+
+// person a can see the backs of b and c
+// person b can see the back of c
+// person c can see just the wall
+// There are 4 hats, 2 black and 2 white. Each person is given a hat. 
+//None of them can see their own hat, but person a can see the hats of b and c, while ...
+//person b can see the hat of person c. Neither c nor d can see any hats.
+
+// Once a person figures out the color of their hat, they shout it.
+
+// Four men, in decreasing height, standing behind each other,..
+// wearing black and white colored hats, with the last man on the right hidden behind the wall.
+
+// Your task is to return the person who will guess their hat first. 
+//You can assume that they will speak only when they reach a correct conclusion.
+
+// Input/Output
+// [input] string a
+// a's hat color ("white" or "black").
+
+// [input] string b
+// b's hat color ("white" or "black").
+
+// [input] string c
+// c's hat color ("white" or "black").
+
+// [input] string d
+// d's hat color ("white" or "black").
+
+// [output] an integer
+// The person to guess his hat's color first, 1 for a, 2 for b, 3 for c and 4 for d.
+
+
+
+function guessHatColor(a,b,c,d) {
+
+    if (c == b && b == 'white'){
+      return 1;
+    };
+    if (c == b && b == 'black'){
+      return 1;
+    };
+    if (b == d && b == 'black'){
+      return 2;
+    };
+    if (b == d && b == 'white'){
+      return 2;
+    };
+    if (a == b && b == 'white'){
+      return 2;
+    };
+    if (a == b && b == 'black'){
+      return 2;
+    };
+  
+  return 0
+}
+
+guessHatColor()
+
+//7kyu- Square Every Digit
+
+// DESCRIPTION:
+// Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+// Note: The function accepts an integer and returns an integer
+
+function squareDigits(num){
+   let splitNumber = num.split("")
+   console.log(splitNumber)
+  return 0;
+}
+
+squareDigits("9119");
