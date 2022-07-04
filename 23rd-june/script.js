@@ -299,9 +299,10 @@ guessHatColor()
 // Note: The function accepts an integer and returns an integer
 
 function squareDigits(num){
-   let splitNumber = num.split("")
+   let splitNumber = num.toString().split("")
    console.log(splitNumber)
-  return 0;
+    let squared = parseInt(splitNumber.map(digit => digit*digit).join(""));
+   return console.log(squared);
 }
 
-squareDigits("9119");
+squareDigits(9119);
