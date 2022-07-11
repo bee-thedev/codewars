@@ -319,18 +319,21 @@ squareDigits(9119);
 // "aba" --> false
 // "moOse" --> false (ignore letter case)
 
+
 function isIsogram(str){
-  let splitString = str.split("")
+  let splitString = str.toLowerCase();
   console.log(splitString)
-  for(let i =0; i<str.length; i++){
-  if(str[i] !== str[i+1]){
-    return true;
-  }else{
-    return false;
+  for(let i =0; i< splitString.length -1; i++){
+    for( let j =i+1; j < splitString.length; j++){
+  if(splitString[i] === splitString[j]){
+    return console.log(false);
   }
 }
 }
+  return console.log(true);
+}
 
 
 
-isIsogram("Dermatoglyphics");
+
+isIsogram("benyshsaeed");
