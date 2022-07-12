@@ -333,7 +333,6 @@ function isIsogram(str){
   return console.log(true);
 }
 
-
-
-
 isIsogram("benyshsaeed");
+
+
