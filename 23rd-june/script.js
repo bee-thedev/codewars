@@ -385,11 +385,13 @@ squareSum([]);
 
 function gps(s, x) {
   if(x.length <=1){
-    return console.log(0);
+    return 0;
   }
-
-  let speed = x.map(distance => Math.floor((3600 * distance) / s));
-  console.log(speed);
+  let speed =[];
+  for(let i=0; i<x.length-1; i++){
+  speed.push(Math.floor((3600 *(x[i+1]-x[i])) / s));
+  }
+  return Math.max(...speed);
   
 }
 
