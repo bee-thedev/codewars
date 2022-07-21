@@ -49,7 +49,53 @@ function removeEveryOther(arr){
 // (80, "celery")
 
 function countVegetables(string){
-  
+  let array = string.split(' ');
+  console.log(array);
+
+  let veggiemal ={
+    cabbage: 0,
+    carrot: 0,
+    celery: 0,
+    cucumber: 0,
+    mushroom: 0,
+    onion: 0,
+    pepper: 0,
+    potato: 0,
+    tofu: 0,
+    turnip: 0
+  };
+
+  for(let i=0; i<array.length; i++){
+    if(array[i] === 'cabbage'){
+      veggiemal.cabbage++;
+    } else if(array[i] === 'carrot'){
+      veggiemal.carrot++;
+    } else if(array[i] === 'celery'){
+      veggiemal.celery++;
+    } else if(array[i] === 'cucumber'){
+      veggiemal.cucumber++;
+    } else if(array[i] === 'mushroom'){
+      veggiemal.mushroom++;
+    } else if(array[i] === 'onion'){
+      veggiemal.onion++;
+    } else if(array[i] === 'pepper'){
+      veggiemal.pepper++;
+    } else if(array[i] === 'potato'){
+      veggiemal.potato++;
+    } else if(array[i] === 'tofu'){
+      veggiemal.tofu++;
+    } else if(array[i] === 'turnip'){
+      veggiemal.turnip++;
+    }
+  }
+
+  let veggiemalArray = [[veggiemal.cabbage, 'cabbage'], [veggiemal.carrot, 'carrot'], [veggiemal.celery, 'celery'], [veggiemal.cucumber, 'cucumber'], [veggiemal.mushroom, 'mushroom'], [veggiemal.onion, 'onion'], [veggiemal.pepper, 'pepper'], [veggiemal.potato, 'potato'], [veggiemal.tofu, 'tofu'], [veggiemal.turnip, 'turnip']];
+  console.log(veggiemalArray);
+  let emptyBasket = veggiemalArray.filter((veggies) => veggies[0] > 0);
+
+  let sortVeggies = emptyBasket.sort((a,b) => a[1] - b[1]).reverse();
+  console.log(sortVeggies);
+  return sortVeggies.sort((a,b) => b[0] - a[0]);
 }
 
-countVegetables("cabbage", "carrot", "celery", "cucumber", "mushroom", "onion", "pepper", "potato", "tofu", "turnip");
+countVegetables("cabbage carrot celery cucumber cabbage mushroom onion pepper potato tofu turnip");
