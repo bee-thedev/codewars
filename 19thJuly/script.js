@@ -148,3 +148,5 @@ minimumPerimeter(45) ;
 function reverseList(arr) {
   return arr;
 }
+
+reverseList([]) ;
