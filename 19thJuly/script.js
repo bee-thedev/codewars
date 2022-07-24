@@ -149,4 +149,6 @@ function reverseList(arr) {
   return arr;
 }
 
-reverseList([]) ;
+reverseList([1,2,3,4,5]);
+//7kyu - Robinson Crusoe
+
