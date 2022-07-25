@@ -146,9 +146,30 @@ minimumPerimeter(45) ;
 //Write reverseList function that simply reverses lists.
 
 function reverseList(arr) {
-  return arr;
+  return console.log(arr.reverse());
 }
 
 reverseList([1,2,3,4,5]);
-//7kyu - Robinson Crusoe
 
+
+//7kyu - Sum of odd numbers
+
+// DESCRIPTION:
+// Given the triangle of consecutive odd numbers:
+
+//              1
+//           3     5
+//        7     9    11
+//    13    15    17    19
+// 21    23    25    27    29
+// ...
+// Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+
+// 1 -->  1
+// 2 --> 3 + 5 = 8
+
+function rowSumOddNumbers(n) {
+ return console.log(Math.pow(n,3));
+}
+
+rowSumOddNumbers(42);
