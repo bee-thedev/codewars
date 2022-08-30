@@ -38,5 +38,5 @@ function count (string) {
     },{}))
   };
   
-  count("my name is beenysh")
+  count("Well, what was meant to be has happened and I cant do nothing about it")
 
