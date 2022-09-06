@@ -30,20 +30,73 @@ function breakChocolate(n,m) {
 
 //Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
 
-Write a function which takes a list of strings and returns each line prepended by the correct number.
+// Write a function which takes a list of strings and returns each line prepended by the correct number.
 
-The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+// The numbering starts at 1. The format is n: string. Notice the colon and space in between.
 
-Examples: (Input --> Output)
+// Examples: (Input --> Output)
 
-[] --> []
-["a", "b", "c"] --> ["1: a", "2: b", "3: "c"]
+// [] --> []
+// ["a", "b", "c"] --> ["1: a", "2: b", "3: "c"]
 
 
-//7 kyu
-Friend or Foe?
-Make a program that filters a list of strings and returns a list with only your friends name in it.
 
-If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+/*========================================================= 7kyu- Friend or Foe ==================================================*/
 
-Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"] 
+//7 kyu -- Friend or Foe?
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"] 
+//i.e.
+
+// friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+// Note: keep the original order of the names in the output.
+
+
+function friend(friends){
+  let friendsArray = []
+  for(let i=0; i< friends.length; i++){
+      if(friends[i].length === 4){
+        friendsArray.push(friends[i])
+      }
+  }
+  return console.log(friendsArray)
+}
+
+friend(["Ryan", "Kieran", "Mark", "Omar", "Beenysh", "Zoha"]);
+
+
+//8kyu - Sum without highest and lowest number
+
+// Task
+// Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+
+// The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+
+// Mind the input validation.
+
+// Example
+// { 6, 2, 1, 8, 10 } => 16
+// { 1, 1, 11, 2, 3 } => 6
+// Input validation
+// If an empty value ( null, None, Nothing etc. ) is given instead of an array, 
+// or the given array is an empty list or a list with only 1 element, return 0.
+
+
+function sumArray(array) {
+  let sum = 0;
+if(array == null){
+  return 0;
+}else if(array.length < 2){
+  return 0
+}else{
+   array = array.sort((a,b)=> a -b)
+  for(let i= 1; i< array.length-1; i++){
+    sum = sum + array[i]
+  }
+  return sum
+}
+ }
+sumArray([1,1,11,2,3]);
