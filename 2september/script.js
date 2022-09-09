@@ -101,10 +101,22 @@ if(array == null){
  }
 sumArray([1,1,11,2,3]);
 
-//8 kyu
-Will you make it?
-You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
+//6kyu-Find the odd int
 
-Considering these factors, write a function that tells you if it is possible to get to the pump or not.
+// Given an array of integers, find the one that appears an odd number of times.
 
-Function should return true if it is possible and false if not.
+// There will always be only one integer that appears an odd number of times.
+
+// Examples
+// [7] should return 7, because it occurs 1 time (which is odd).
+// [0] should return 0, because it occurs 1 time (which is odd).
+// [1,1,2] should return 2, because it occurs 1 time (which is odd).
+// [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+// [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+
+function findOdd(A) {
+  //happy coding!
+  return 0;
+}
+
+findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1])
