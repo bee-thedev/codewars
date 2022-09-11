@@ -120,3 +120,12 @@ function findOdd(A) {
 }
 
 findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1])
+
+
+//7kyu- chain me
+
+DESCRIPTION:
+Write a generic function chainer
+Write a generic function chainer that takes a starting value, and an array of functions to execute on it (array of symbols for Ruby).
+
+The input for each function is the output of the previous function (except the first function, which takes the starting value as its input). Return the final value after execution is complete.
