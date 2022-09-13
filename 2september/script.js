@@ -146,14 +146,8 @@ findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1])
 
 function chain(input, fs) {
   // implement the "chain" function
-  function add(input){
-    return input + 1
-  }
-
-  function mult(input){
-    return input * 2;
-  }
-  return console.log(fs(input))
+    fs.forEach(funktion=>input = funktion(input))
+    return console.log(input)
   }
 
   chain(2, [add, mult])
