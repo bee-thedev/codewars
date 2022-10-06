@@ -152,7 +152,7 @@ function chain(input, fs) {
 
   chain(2, [add, mult])
 
-<<<<<<< HEAD
+
 
   //7kyu -- Cats and Shelves
 
@@ -207,8 +207,17 @@ function chain(input, fs) {
 // 3 6 9
 // for given example, the return value should be: [[1,2,3],[2,4,6],[3,6,9]]
 
-multiplicationTable = function(size) {
-  // insert code here
-}
+const multiplicationTable = function(size) {
+  let tableArray = []
+  for(let i = 0; i< size; i++){
+    tableArray.push([])
+    for(let j = 0; j<size; j++){
+      tableArray[i].push((i+1) * (j+1))
+    }
+  }
+   return tableArray
+ }
+
+
 
 
